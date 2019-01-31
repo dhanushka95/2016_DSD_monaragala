@@ -1,0 +1,332 @@
+-- MySqlBackup.NET 2.0.4
+-- Dump Time: 2018-02-17 22:12:59
+-- --------------------------------------
+-- Server version 10.1.26-MariaDB mariadb.org binary distribution
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES latin1 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+-- 
+-- Definition of 2014biochandimawellage
+-- 
+
+DROP TABLE IF EXISTS `2014biochandimawellage`;
+CREATE TABLE IF NOT EXISTS `2014biochandimawellage` (
+  `phoneNumber` char(10) NOT NULL,
+  `studentNumber` int(11) NOT NULL,
+  `2018-02|1` double NOT NULL,
+  PRIMARY KEY (`studentNumber`),
+  CONSTRAINT `2014biochandimawellage_ibfk_1` FOREIGN KEY (`studentNumber`) REFERENCES `dsdstudentdetails` (`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2014biochandimawellage
+-- 
+
+/*!40000 ALTER TABLE `2014biochandimawellage` DISABLE KEYS */;
+INSERT INTO `2014biochandimawellage`(`phoneNumber`,`studentNumber`,`2018-02|1`) VALUES
+('0719869318',1,90),
+('0555718897',3,0),
+('0786678173',5,0),
+('0555718897',6,0);
+/*!40000 ALTER TABLE `2014biochandimawellage` ENABLE KEYS */;
+
+-- 
+-- Definition of 2014biochandimawellageattendence
+-- 
+
+DROP TABLE IF EXISTS `2014biochandimawellageattendence`;
+CREATE TABLE IF NOT EXISTS `2014biochandimawellageattendence` (
+  `BarCodeValue` int(200) NOT NULL,
+  `studentNumber` char(100) NOT NULL,
+  `2018-02-01` int(10) NOT NULL,
+  `2018-02-02` int(10) NOT NULL,
+  `2018-02-03` int(10) NOT NULL,
+  `2018-02-04` int(10) NOT NULL,
+  `2018-02-05` int(10) NOT NULL,
+  `2018-02-08` int(10) NOT NULL,
+  PRIMARY KEY (`BarCodeValue`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2014biochandimawellageattendence
+-- 
+
+/*!40000 ALTER TABLE `2014biochandimawellageattendence` DISABLE KEYS */;
+INSERT INTO `2014biochandimawellageattendence`(`BarCodeValue`,`studentNumber`,`2018-02-01`,`2018-02-02`,`2018-02-03`,`2018-02-04`,`2018-02-05`,`2018-02-08`) VALUES
+(0,'1',0,0,1,0,1,0),
+(2014,'3',0,0,1,0,1,0);
+/*!40000 ALTER TABLE `2014biochandimawellageattendence` ENABLE KEYS */;
+
+-- 
+-- Definition of 2014biochandimawellagecard
+-- 
+
+DROP TABLE IF EXISTS `2014biochandimawellagecard`;
+CREATE TABLE IF NOT EXISTS `2014biochandimawellagecard` (
+  `studentNumber` int(10) NOT NULL,
+  `Month` char(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2014biochandimawellagecard
+-- 
+
+/*!40000 ALTER TABLE `2014biochandimawellagecard` DISABLE KEYS */;
+INSERT INTO `2014biochandimawellagecard`(`studentNumber`,`Month`) VALUES
+(1,'2018-01-031'),
+(3,'2018-03-03');
+/*!40000 ALTER TABLE `2014biochandimawellagecard` ENABLE KEYS */;
+
+-- 
+-- Definition of 2014biochandimawellagepay
+-- 
+
+DROP TABLE IF EXISTS `2014biochandimawellagepay`;
+CREATE TABLE IF NOT EXISTS `2014biochandimawellagepay` (
+  `studentNumber` int(100) NOT NULL,
+  `2018-02` char(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2014biochandimawellagepay
+-- 
+
+/*!40000 ALTER TABLE `2014biochandimawellagepay` DISABLE KEYS */;
+INSERT INTO `2014biochandimawellagepay`(`studentNumber`,`2018-02`) VALUES
+(1,'Before2018-2'),
+(1,'Before2018-01-03'),
+(1,'Before2018-01-031'),
+(3,'This2018-02-03'),
+(3,'After2018-03-03'),
+(3,'After2018-03-03'),
+(5,'This2018-02-08'),
+(5,'This2018-02-08');
+/*!40000 ALTER TABLE `2014biochandimawellagepay` ENABLE KEYS */;
+
+-- 
+-- Definition of 2015physicsdinusha
+-- 
+
+DROP TABLE IF EXISTS `2015physicsdinusha`;
+CREATE TABLE IF NOT EXISTS `2015physicsdinusha` (
+  `phoneNumber` char(10) NOT NULL,
+  `studentNumber` int(100) NOT NULL,
+  `2018-02|1` double NOT NULL,
+  PRIMARY KEY (`studentNumber`),
+  CONSTRAINT `2015physicsdinusha_ibfk_1` FOREIGN KEY (`studentNumber`) REFERENCES `dsdstudentdetails` (`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2015physicsdinusha
+-- 
+
+/*!40000 ALTER TABLE `2015physicsdinusha` DISABLE KEYS */;
+INSERT INTO `2015physicsdinusha`(`phoneNumber`,`studentNumber`,`2018-02|1`) VALUES
+('0719869318',1,100),
+('0789432181',3,0);
+/*!40000 ALTER TABLE `2015physicsdinusha` ENABLE KEYS */;
+
+-- 
+-- Definition of 2015physicsdinushaattendence
+-- 
+
+DROP TABLE IF EXISTS `2015physicsdinushaattendence`;
+CREATE TABLE IF NOT EXISTS `2015physicsdinushaattendence` (
+  `BarCodeValue` int(200) NOT NULL,
+  `studentNumber` char(100) NOT NULL,
+  `2018-02-13` int(10) NOT NULL,
+  `2018-02-17` int(10) NOT NULL,
+  PRIMARY KEY (`BarCodeValue`,`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2015physicsdinushaattendence
+-- 
+
+/*!40000 ALTER TABLE `2015physicsdinushaattendence` DISABLE KEYS */;
+INSERT INTO `2015physicsdinushaattendence`(`BarCodeValue`,`studentNumber`,`2018-02-13`,`2018-02-17`) VALUES
+(0,'3',0,1),
+(1,'1',1,1);
+/*!40000 ALTER TABLE `2015physicsdinushaattendence` ENABLE KEYS */;
+
+-- 
+-- Definition of 2015physicsdinushacard
+-- 
+
+DROP TABLE IF EXISTS `2015physicsdinushacard`;
+CREATE TABLE IF NOT EXISTS `2015physicsdinushacard` (
+  `studentNumber` int(10) NOT NULL,
+  `Month` char(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2015physicsdinushacard
+-- 
+
+/*!40000 ALTER TABLE `2015physicsdinushacard` DISABLE KEYS */;
+INSERT INTO `2015physicsdinushacard`(`studentNumber`,`Month`) VALUES
+(1,'2018-02-13'),
+(3,'');
+/*!40000 ALTER TABLE `2015physicsdinushacard` ENABLE KEYS */;
+
+-- 
+-- Definition of 2015physicsdinushapay
+-- 
+
+DROP TABLE IF EXISTS `2015physicsdinushapay`;
+CREATE TABLE IF NOT EXISTS `2015physicsdinushapay` (
+  `studentNumber` int(10) NOT NULL,
+  `2018-02` char(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2015physicsdinushapay
+-- 
+
+/*!40000 ALTER TABLE `2015physicsdinushapay` DISABLE KEYS */;
+INSERT INTO `2015physicsdinushapay`(`studentNumber`,`2018-02`) VALUES
+(1,'This2018-02-13');
+/*!40000 ALTER TABLE `2015physicsdinushapay` ENABLE KEYS */;
+
+-- 
+-- Definition of class
+-- 
+
+DROP TABLE IF EXISTS `class`;
+CREATE TABLE IF NOT EXISTS `class` (
+  `subject` varchar(20) NOT NULL,
+  `year` varchar(20) NOT NULL,
+  `teacher` char(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table class
+-- 
+
+/*!40000 ALTER TABLE `class` DISABLE KEYS */;
+INSERT INTO `class`(`subject`,`year`,`teacher`) VALUES
+('bio','2014','chandimawellage'),
+('physics','2015','dinusha');
+/*!40000 ALTER TABLE `class` ENABLE KEYS */;
+
+-- 
+-- Definition of classadd
+-- 
+
+DROP TABLE IF EXISTS `classadd`;
+CREATE TABLE IF NOT EXISTS `classadd` (
+  `year` char(8) NOT NULL,
+  `subjec` char(30) NOT NULL,
+  `name` char(30) NOT NULL,
+  `phoneNumber` char(10) NOT NULL,
+  `addres` char(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table classadd
+-- 
+
+/*!40000 ALTER TABLE `classadd` DISABLE KEYS */;
+INSERT INTO `classadd`(`year`,`subjec`,`name`,`phoneNumber`,`addres`) VALUES
+('2016','physics','dinusha','8895734','gdjs'),
+('2015','chemistry','dinusha','0555718897','monaragala'),
+('2014','chemistry','dinuha','0555718897','monaragala');
+/*!40000 ALTER TABLE `classadd` ENABLE KEYS */;
+
+-- 
+-- Definition of dsdstudentdetails
+-- 
+
+DROP TABLE IF EXISTS `dsdstudentdetails`;
+CREATE TABLE IF NOT EXISTS `dsdstudentdetails` (
+  `id` varchar(10) NOT NULL,
+  `name` char(50) NOT NULL,
+  `studentNumber` int(20) NOT NULL AUTO_INCREMENT,
+  `addres` varchar(50) NOT NULL,
+  `phoneNumber` varchar(10) NOT NULL,
+  `date` date NOT NULL,
+  `batch` varchar(10) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table dsdstudentdetails
+-- 
+
+/*!40000 ALTER TABLE `dsdstudentdetails` DISABLE KEYS */;
+INSERT INTO `dsdstudentdetails`(`id`,`name`,`studentNumber`,`addres`,`phoneNumber`,`date`,`batch`) VALUES
+('952862910v','dhanushka',1,'okkampitiya','0719869318','2017-11-06 00:00:00','2014'),
+('952862912v','sumanavathi',3,'maligavila','0555718897','2017-11-07 00:00:00','2016'),
+('952862915v','chathurani',4,'helagama','0555718897','2017-11-07 00:00:00','2013'),
+('952862918v','ruvan',5,'helagama','0786678173','2017-11-07 00:00:00','2013'),
+('952862960v','kiribanda',6,'okkampitiya','0555718897','2017-11-07 00:00:00','1995'),
+('952862916v','sumanavathii',7,'okkampitiya','0555718897','2017-11-17 00:00:00','1942'),
+('952862917v','kiri',8,'okkampitiya','0555718897','2017-11-17 00:00:00','1940'),
+('952862980v','dayawansha',9,'okkampitiya','0719869318','2017-11-27 00:00:00','2014');
+/*!40000 ALTER TABLE `dsdstudentdetails` ENABLE KEYS */;
+
+-- 
+-- Definition of login
+-- 
+
+DROP TABLE IF EXISTS `login`;
+CREATE TABLE IF NOT EXISTS `login` (
+  `username` char(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `Value` int(1) NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table login
+-- 
+
+/*!40000 ALTER TABLE `login` DISABLE KEYS */;
+INSERT INTO `login`(`username`,`password`,`Value`) VALUES
+('Admin','12345678',1),
+('dhanusha','19951012',1),
+('user','0555718897',0);
+/*!40000 ALTER TABLE `login` ENABLE KEYS */;
+
+-- 
+-- Definition of marks
+-- 
+
+DROP TABLE IF EXISTS `marks`;
+CREATE TABLE IF NOT EXISTS `marks` (
+  `studentNumber` int(30) NOT NULL,
+  `Name` char(50) NOT NULL,
+  `subject` varchar(20) NOT NULL,
+  `1` int(20) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table marks
+-- 
+
+/*!40000 ALTER TABLE `marks` DISABLE KEYS */;
+
+/*!40000 ALTER TABLE `marks` ENABLE KEYS */;
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+
+-- Dump completed on 2018-02-17 22:12:59
+-- Total time: 0:0:0:0:221 (d:h:m:s:ms)

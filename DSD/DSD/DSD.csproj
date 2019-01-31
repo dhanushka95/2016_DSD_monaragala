@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F857F557-0CF7-446C-8391-E1F238AB27D2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DSD</RootNamespace>
+    <AssemblyName>DSD</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\itextsharp-all-5.5.10\itextsharp.xfaworker-dll-5.5.10\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\itextsharp-all-5.5.10\itextsharp-dll-pdfa\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="messagingtoolkit.barcode, Version=1.5.0.0, Culture=neutral, PublicKeyToken=4d44dd7196d3c1ac, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\software\messagingtoolkit.barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\gsm\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MYproject\gsm\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity">
+      <HintPath>C:\Users\kpdn\Desktop\128B\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\kpdn\Desktop\128B\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="mysqlbackup">
+      <HintPath>..\..\..\mysqlbackup\mysqlbackup.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.Ribbon35">
+      <HintPath>..\..\..\..\visualC++\Binaries\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClass.Designer.cs">
+      <DependentUpon>AddClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddClassStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClassStudent.Designer.cs">
+      <DependentUpon>AddClassStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BarcodeGenaret.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarcodeGenaret.Designer.cs">
+      <DependentUpon>BarcodeGenaret.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClearPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClearPay.Designer.cs">
+      <DependentUpon>ClearPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigMsg.Designer.cs">
+      <DependentUpon>ConfigMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigrationMysql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigrationMysql.Designer.cs">
+      <DependentUpon>ConfigrationMysql.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBMain.Designer.cs">
+      <DependentUpon>DBMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBSub.Designer.cs">
+      <DependentUpon>DBSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelectClassStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelectClassStudent.Designer.cs">
+      <DependentUpon>DelectClassStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delet.Designer.cs">
+      <DependentUpon>delet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeletClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletClass.Designer.cs">
+      <DependentUpon>DeletClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeletUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletUser.Designer.cs">
+      <DependentUpon>DeletUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="details.Designer.cs">
+      <DependentUpon>details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsdDATADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsdDATADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="graphic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="graphic.Designer.cs">
+      <DependentUpon>graphic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inputMarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inputMarks.Designer.cs">
+      <DependentUpon>inputMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="marks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="marks.Designer.cs">
+      <DependentUpon>marks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotGetCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotGetCard.Designer.cs">
+      <DependentUpon>NotGetCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaySheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaySheet.Designer.cs">
+      <DependentUpon>PaySheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaySheetForCentercs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaySheetForCentercs.Designer.cs">
+      <DependentUpon>PaySheetForCentercs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print.Designer.cs">
+      <DependentUpon>Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RankAndSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RankAndSend.Designer.cs">
+      <DependentUpon>RankAndSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendMessageForCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendMessageForCenter.Designer.cs">
+      <DependentUpon>SendMessageForCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SentMessageForOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SentMessageForOther.Designer.cs">
+      <DependentUpon>SentMessageForOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SentMsgForClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SentMsgForClass.Designer.cs">
+      <DependentUpon>SentMsgForClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAdd.Designer.cs">
+      <DependentUpon>StudentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update.Designer.cs">
+      <DependentUpon>update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBarcode.Designer.cs">
+      <DependentUpon>UpdateBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateClass.Designer.cs">
+      <DependentUpon>UpdateClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateClassStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateClassStudent.Designer.cs">
+      <DependentUpon>UpdateClassStudent.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddClass.resx">
+      <DependentUpon>AddClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddClassStudent.resx">
+      <DependentUpon>AddClassStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarcodeGenaret.resx">
+      <DependentUpon>BarcodeGenaret.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="centerAmount.rdlc" />
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClearPay.resx">
+      <DependentUpon>ClearPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigMsg.resx">
+      <DependentUpon>ConfigMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigrationMysql.resx">
+      <DependentUpon>ConfigrationMysql.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBMain.resx">
+      <DependentUpon>DBMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBSub.resx">
+      <DependentUpon>DBSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelectClassStudent.resx">
+      <DependentUpon>DelectClassStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delet.resx">
+      <DependentUpon>delet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletClass.resx">
+      <DependentUpon>DeletClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletUser.resx">
+      <DependentUpon>DeletUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="details.resx">
+      <DependentUpon>details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="graphic.resx">
+      <DependentUpon>graphic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inputMarks.resx">
+      <DependentUpon>inputMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="marks.resx">
+      <DependentUpon>marks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotGetCard.resx">
+      <DependentUpon>NotGetCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaySheet.resx">
+      <DependentUpon>PaySheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaySheetForCentercs.resx">
+      <DependentUpon>PaySheetForCentercs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print.resx">
+      <DependentUpon>Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RankAndSend.resx">
+      <DependentUpon>RankAndSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportt.rdlc" />
+    <EmbeddedResource Include="SendMessageForCenter.resx">
+      <DependentUpon>SendMessageForCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SentMessageForOther.resx">
+      <DependentUpon>SentMessageForOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SentMsgForClass.resx">
+      <DependentUpon>SentMsgForClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAdd.resx">
+      <DependentUpon>StudentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update.resx">
+      <DependentUpon>update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBarcode.resx">
+      <DependentUpon>UpdateBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateClass.resx">
+      <DependentUpon>UpdateClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateClassStudent.resx">
+      <DependentUpon>UpdateClassStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dsdDATADataSet.xsc">
+      <DependentUpon>dsdDATADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dsdDATADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsdDATADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsdDATADataSet.xss">
+      <DependentUpon>dsdDATADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_back1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addUse1r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpdateUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hydrattz-Multipurpose-Alphabet-Letter-D-grey.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

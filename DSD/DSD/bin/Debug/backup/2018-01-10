@@ -1,0 +1,154 @@
+-- MySqlBackup.NET 2.0.4
+-- Dump Time: 2018-01-10 23:46:40
+-- --------------------------------------
+-- Server version 10.1.26-MariaDB mariadb.org binary distribution
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES latin1 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+-- 
+-- Definition of class
+-- 
+
+DROP TABLE IF EXISTS `class`;
+CREATE TABLE IF NOT EXISTS `class` (
+  `subject` varchar(20) NOT NULL,
+  `year` varchar(20) NOT NULL,
+  `teacher` char(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table class
+-- 
+
+/*!40000 ALTER TABLE `class` DISABLE KEYS */;
+INSERT INTO `class`(`subject`,`year`,`teacher`) VALUES
+('physics','2014','dinusha'),
+('chemistry','2014','dinusha'),
+('pureMaths','2014','asanka'),
+('physics','2015','dinusha'),
+('chemistry','2015','dinusha'),
+('pureMaths','2015','asanka');
+/*!40000 ALTER TABLE `class` ENABLE KEYS */;
+
+-- 
+-- Definition of classadd
+-- 
+
+DROP TABLE IF EXISTS `classadd`;
+CREATE TABLE IF NOT EXISTS `classadd` (
+  `year` char(8) NOT NULL,
+  `subjec` char(30) NOT NULL,
+  `name` char(30) NOT NULL,
+  `phoneNumber` char(10) NOT NULL,
+  `addres` char(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table classadd
+-- 
+
+/*!40000 ALTER TABLE `classadd` DISABLE KEYS */;
+INSERT INTO `classadd`(`year`,`subjec`,`name`,`phoneNumber`,`addres`) VALUES
+('2016','physics','dinusha','8895734','gdjs'),
+('2015','chemistry','dinusha','0555718897','monaragala'),
+('2014','chemistry','dinuha','0555718897','monaragala');
+/*!40000 ALTER TABLE `classadd` ENABLE KEYS */;
+
+-- 
+-- Definition of dsdstudentdetails
+-- 
+
+DROP TABLE IF EXISTS `dsdstudentdetails`;
+CREATE TABLE IF NOT EXISTS `dsdstudentdetails` (
+  `id` varchar(10) NOT NULL,
+  `name` char(50) NOT NULL,
+  `studentNumber` int(20) NOT NULL AUTO_INCREMENT,
+  `addres` varchar(50) NOT NULL,
+  `phoneNumber` varchar(10) NOT NULL,
+  `date` date NOT NULL,
+  `batch` varchar(10) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table dsdstudentdetails
+-- 
+
+/*!40000 ALTER TABLE `dsdstudentdetails` DISABLE KEYS */;
+INSERT INTO `dsdstudentdetails`(`id`,`name`,`studentNumber`,`addres`,`phoneNumber`,`date`,`batch`) VALUES
+('952862910v','danushka',1,'okkampitiya','719869318','2017-11-06 00:00:00','2014'),
+('952862912v','sumanavathi',3,'maligavila','555718897','2017-11-07 00:00:00','2017'),
+('952862915v','chathurani',4,'helagama','0555718897','2017-11-07 00:00:00','2013'),
+('952862918v','ruvan',5,'helagama okkampitiya','786678173','2017-11-07 00:00:00','2017'),
+('952862960v','kiribanda',6,'okkampitiya','0555718897','2017-11-07 00:00:00','1995'),
+('952862916v','sumanavathii',7,'okkampitiya','0555718897','2017-11-17 00:00:00','1942'),
+('952862917v','kiri',8,'okkampitiya','0555718897','2017-11-17 00:00:00','1940'),
+('952862980','hh',9,'kk','7879','2017-11-23 00:00:00','2016'),
+('','',10,'','','2017-11-24 00:00:00',''),
+('1','',11,'','','2017-11-24 00:00:00',''),
+('1','dfd',12,'df','','2017-11-24 00:00:00','2016'),
+('112','',13,'','','2017-11-24 00:00:00',''),
+('1','dfd',14,'ff','098','2017-11-24 00:00:00','2w23');
+/*!40000 ALTER TABLE `dsdstudentdetails` ENABLE KEYS */;
+
+-- 
+-- Definition of login
+-- 
+
+DROP TABLE IF EXISTS `login`;
+CREATE TABLE IF NOT EXISTS `login` (
+  `username` char(30) NOT NULL,
+  `password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table login
+-- 
+
+/*!40000 ALTER TABLE `login` DISABLE KEYS */;
+INSERT INTO `login`(`username`,`password`) VALUES
+('user','0555718897');
+/*!40000 ALTER TABLE `login` ENABLE KEYS */;
+
+-- 
+-- Definition of marks
+-- 
+
+DROP TABLE IF EXISTS `marks`;
+CREATE TABLE IF NOT EXISTS `marks` (
+  `studentNumber` int(30) NOT NULL,
+  `Name` char(50) NOT NULL,
+  `subject` varchar(20) NOT NULL,
+  `1` int(20) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table marks
+-- 
+
+/*!40000 ALTER TABLE `marks` DISABLE KEYS */;
+
+/*!40000 ALTER TABLE `marks` ENABLE KEYS */;
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+
+-- Dump completed on 2018-01-10 23:46:40
+-- Total time: 0:0:0:0:215 (d:h:m:s:ms)

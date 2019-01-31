@@ -1,0 +1,334 @@
+-- MySqlBackup.NET 2.0.4
+-- Dump Time: 2017-12-04 22:21:47
+-- --------------------------------------
+-- Server version 10.1.26-MariaDB mariadb.org binary distribution
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES latin1 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+-- 
+-- Definition of 2014chemistrydinuha
+-- 
+
+DROP TABLE IF EXISTS `2014chemistrydinuha`;
+CREATE TABLE IF NOT EXISTS `2014chemistrydinuha` (
+  `phoneNumber` char(10) NOT NULL,
+  `studentNumber` int(11) NOT NULL,
+  `Name` char(40) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2014chemistrydinuha
+-- 
+
+/*!40000 ALTER TABLE `2014chemistrydinuha` DISABLE KEYS */;
+
+/*!40000 ALTER TABLE `2014chemistrydinuha` ENABLE KEYS */;
+
+-- 
+-- Definition of 2014chemistrydinusha
+-- 
+
+DROP TABLE IF EXISTS `2014chemistrydinusha`;
+CREATE TABLE IF NOT EXISTS `2014chemistrydinusha` (
+  `phoneNumber` char(10) NOT NULL,
+  `studentNumber` int(11) NOT NULL,
+  `Name` char(40) NOT NULL,
+  `2017-11|1` int(11) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2014chemistrydinusha
+-- 
+
+/*!40000 ALTER TABLE `2014chemistrydinusha` DISABLE KEYS */;
+INSERT INTO `2014chemistrydinusha`(`phoneNumber`,`studentNumber`,`Name`,`2017-11|1`) VALUES
+('719869318',1,'danushka',0),
+('555718897',3,'sumanavathi',0),
+('0786678173',5,'ruvan',0);
+/*!40000 ALTER TABLE `2014chemistrydinusha` ENABLE KEYS */;
+
+-- 
+-- Definition of 2014physicsdinusha
+-- 
+
+DROP TABLE IF EXISTS `2014physicsdinusha`;
+CREATE TABLE IF NOT EXISTS `2014physicsdinusha` (
+  `phoneNumber` char(10) NOT NULL,
+  `studentNumber` int(20) NOT NULL,
+  `Name` char(40) NOT NULL,
+  `2017-11|1` int(11) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2014physicsdinusha
+-- 
+
+/*!40000 ALTER TABLE `2014physicsdinusha` DISABLE KEYS */;
+INSERT INTO `2014physicsdinusha`(`phoneNumber`,`studentNumber`,`Name`,`2017-11|1`) VALUES
+('0719869318',1,'danushka',75),
+('555718897',3,'sumanavathi',0),
+('0555718897',4,'chathurani',70),
+('0555718897',6,'kiribanda',0),
+('0555718897',9,'bandara',0);
+/*!40000 ALTER TABLE `2014physicsdinusha` ENABLE KEYS */;
+
+-- 
+-- Definition of 2014puremathsasanka
+-- 
+
+DROP TABLE IF EXISTS `2014puremathsasanka`;
+CREATE TABLE IF NOT EXISTS `2014puremathsasanka` (
+  `phoneNumber` char(10) NOT NULL,
+  `studentNumber` int(11) NOT NULL,
+  `Name` char(40) NOT NULL,
+  `2017-11|1` int(11) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2014puremathsasanka
+-- 
+
+/*!40000 ALTER TABLE `2014puremathsasanka` DISABLE KEYS */;
+INSERT INTO `2014puremathsasanka`(`phoneNumber`,`studentNumber`,`Name`,`2017-11|1`) VALUES
+('719869318',1,'danushka',90),
+('0555718897',4,'chathurani',100);
+/*!40000 ALTER TABLE `2014puremathsasanka` ENABLE KEYS */;
+
+-- 
+-- Definition of 2015chemistrydinusha
+-- 
+
+DROP TABLE IF EXISTS `2015chemistrydinusha`;
+CREATE TABLE IF NOT EXISTS `2015chemistrydinusha` (
+  `phoneNumber` char(10) NOT NULL,
+  `studentNumber` int(11) NOT NULL,
+  `Name` char(40) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2015chemistrydinusha
+-- 
+
+/*!40000 ALTER TABLE `2015chemistrydinusha` DISABLE KEYS */;
+INSERT INTO `2015chemistrydinusha`(`phoneNumber`,`studentNumber`,`Name`) VALUES
+('719869318',1,'danushka'),
+('0555718897',8,'kiri');
+/*!40000 ALTER TABLE `2015chemistrydinusha` ENABLE KEYS */;
+
+-- 
+-- Definition of 2015physicsdinusha
+-- 
+
+DROP TABLE IF EXISTS `2015physicsdinusha`;
+CREATE TABLE IF NOT EXISTS `2015physicsdinusha` (
+  `phoneNumber` char(10) NOT NULL,
+  `studentNumber` int(11) NOT NULL,
+  `Name` char(40) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2015physicsdinusha
+-- 
+
+/*!40000 ALTER TABLE `2015physicsdinusha` DISABLE KEYS */;
+INSERT INTO `2015physicsdinusha`(`phoneNumber`,`studentNumber`,`Name`) VALUES
+('719869318',1,'danushka'),
+('0555718897',8,'kiri');
+/*!40000 ALTER TABLE `2015physicsdinusha` ENABLE KEYS */;
+
+-- 
+-- Definition of 2015puremathsasanka
+-- 
+
+DROP TABLE IF EXISTS `2015puremathsasanka`;
+CREATE TABLE IF NOT EXISTS `2015puremathsasanka` (
+  `phoneNumber` char(10) NOT NULL,
+  `studentNumber` int(11) NOT NULL,
+  `Name` char(40) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2015puremathsasanka
+-- 
+
+/*!40000 ALTER TABLE `2015puremathsasanka` DISABLE KEYS */;
+INSERT INTO `2015puremathsasanka`(`phoneNumber`,`studentNumber`,`Name`) VALUES
+('555718897',3,'sumanavathi'),
+('0786678173',5,'ruvan');
+/*!40000 ALTER TABLE `2015puremathsasanka` ENABLE KEYS */;
+
+-- 
+-- Definition of 2016biochandimawellalage
+-- 
+
+DROP TABLE IF EXISTS `2016biochandimawellalage`;
+CREATE TABLE IF NOT EXISTS `2016biochandimawellalage` (
+  `phoneNumber` char(10) NOT NULL,
+  `studentNumber` int(11) NOT NULL,
+  `Name` char(40) NOT NULL,
+  `2017-11|1` int(11) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table 2016biochandimawellalage
+-- 
+
+/*!40000 ALTER TABLE `2016biochandimawellalage` DISABLE KEYS */;
+INSERT INTO `2016biochandimawellalage`(`phoneNumber`,`studentNumber`,`Name`,`2017-11|1`) VALUES
+('719869318',1,'danushka',60),
+('555718897',3,'sumanavathi',90),
+('0555718897',4,'chathurani',70),
+('0555718897',6,'kiribanda',0);
+/*!40000 ALTER TABLE `2016biochandimawellalage` ENABLE KEYS */;
+
+-- 
+-- Definition of class
+-- 
+
+DROP TABLE IF EXISTS `class`;
+CREATE TABLE IF NOT EXISTS `class` (
+  `subject` varchar(20) NOT NULL,
+  `year` varchar(20) NOT NULL,
+  `teacher` char(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table class
+-- 
+
+/*!40000 ALTER TABLE `class` DISABLE KEYS */;
+INSERT INTO `class`(`subject`,`year`,`teacher`) VALUES
+('physics','2014','dinusha'),
+('chemistry','2014','dinusha'),
+('pureMaths','2014','asanka'),
+('physics','2015','dinusha'),
+('chemistry','2015','dinusha'),
+('pureMaths','2015','asanka'),
+('bio','2016','chandimawellalage');
+/*!40000 ALTER TABLE `class` ENABLE KEYS */;
+
+-- 
+-- Definition of classadd
+-- 
+
+DROP TABLE IF EXISTS `classadd`;
+CREATE TABLE IF NOT EXISTS `classadd` (
+  `year` char(8) NOT NULL,
+  `subjec` char(30) NOT NULL,
+  `name` char(30) NOT NULL,
+  `phoneNumber` char(10) NOT NULL,
+  `addres` char(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table classadd
+-- 
+
+/*!40000 ALTER TABLE `classadd` DISABLE KEYS */;
+INSERT INTO `classadd`(`year`,`subjec`,`name`,`phoneNumber`,`addres`) VALUES
+('2016','physics','dinusha','8895734','gdjs'),
+('2015','chemistry','dinusha','0555718897','monaragala'),
+('2014','chemistry','dinuha','0555718897','monaragala');
+/*!40000 ALTER TABLE `classadd` ENABLE KEYS */;
+
+-- 
+-- Definition of dsdstudentdetails
+-- 
+
+DROP TABLE IF EXISTS `dsdstudentdetails`;
+CREATE TABLE IF NOT EXISTS `dsdstudentdetails` (
+  `id` varchar(10) NOT NULL,
+  `name` char(50) NOT NULL,
+  `studentNumber` int(20) NOT NULL AUTO_INCREMENT,
+  `addres` varchar(50) NOT NULL,
+  `phoneNumber` varchar(10) NOT NULL,
+  `date` date NOT NULL,
+  `batch` varchar(10) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table dsdstudentdetails
+-- 
+
+/*!40000 ALTER TABLE `dsdstudentdetails` DISABLE KEYS */;
+INSERT INTO `dsdstudentdetails`(`id`,`name`,`studentNumber`,`addres`,`phoneNumber`,`date`,`batch`) VALUES
+('952862910v','danushka',1,'okkampitiya','719869318','2017-11-06 00:00:00','2014'),
+('952862912v','sumanavathi',3,'maligavila','555718897','2017-11-07 00:00:00','2016'),
+('952862915v','chathurani',4,'helagama','0555718897','2017-11-07 00:00:00','2013'),
+('952862918v','ruvan',5,'helagama','0786678173','2017-11-07 00:00:00','2013'),
+('952862960v','kiribanda',6,'okkampitiya','0555718897','2017-11-07 00:00:00','1995'),
+('952862916v','sumanavathii',7,'okkampitiya','0555718897','2017-11-17 00:00:00','1942'),
+('952862917v','kiri',8,'okkampitiya','0555718897','2017-11-17 00:00:00','1940'),
+('952862970v','bandara',9,'okkampitiya','0555718897','2017-11-30 00:00:00','2015');
+/*!40000 ALTER TABLE `dsdstudentdetails` ENABLE KEYS */;
+
+-- 
+-- Definition of login
+-- 
+
+DROP TABLE IF EXISTS `login`;
+CREATE TABLE IF NOT EXISTS `login` (
+  `username` char(30) NOT NULL,
+  `password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table login
+-- 
+
+/*!40000 ALTER TABLE `login` DISABLE KEYS */;
+INSERT INTO `login`(`username`,`password`) VALUES
+('user','0555718897');
+/*!40000 ALTER TABLE `login` ENABLE KEYS */;
+
+-- 
+-- Definition of marks
+-- 
+
+DROP TABLE IF EXISTS `marks`;
+CREATE TABLE IF NOT EXISTS `marks` (
+  `studentNumber` int(30) NOT NULL,
+  `Name` char(50) NOT NULL,
+  `subject` varchar(20) NOT NULL,
+  `1` int(20) NOT NULL,
+  PRIMARY KEY (`studentNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table marks
+-- 
+
+/*!40000 ALTER TABLE `marks` DISABLE KEYS */;
+
+/*!40000 ALTER TABLE `marks` ENABLE KEYS */;
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+
+-- Dump completed on 2017-12-04 22:21:48
+-- Total time: 0:0:0:0:538 (d:h:m:s:ms)
